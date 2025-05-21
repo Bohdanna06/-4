@@ -1,0 +1,202 @@
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    background: url('/image/brown-coffee-beans.jpg') repeat;
+    background-size: 300px;
+    padding: 20px;
+    position: relative;
+}
+
+.hexagon-wrapper {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 50px 0;
+}
+
+.hexagon {
+    position: absolute;
+    width: 200px;
+    height: 230px;
+    background: rgba(90, 60, 40, 0.9);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.hexagon-content {
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.admin-hub {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 288px;
+    background: radial-gradient(circle, #5a3c28, #3f2a1c);
+    animation: glow 3s infinite;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #5a3c28;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #7a5c3a;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #5a3c28;
+    }
+}
+
+.users-panel {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+    width: 300px;
+    height: 346px;
+}
+
+.products-panel {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+    width: 300px;
+    height: 346px;
+}
+
+.active-panel {
+    transform: translate(-50%, -50%) scale(1) !important;
+    opacity: 1 !important;
+}
+
+.users-list,
+.products-list {
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #fff;
+    color: #5a3c28;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.user-item,
+.product-item {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #b38c5e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-item button,
+.product-item button {
+    background: #7a5c3a;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.user-item button:hover,
+.product-item button:hover {
+    background: #b38c5e;
+}
+
+.user-form,
+.product-form {
+    margin-top: 10px;
+}
+
+.info-field {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.info-field label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.info-field input,
+.info-field select {
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+    font-size: 12px;
+}
+
+#saveUser,
+#saveProduct {
+    margin-top: 10px;
+    background: #7a5c3a;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#saveUser:hover,
+#saveProduct:hover {
+    background: #b38c5e;
+}
+
+.panel-toggle {
+    display: flex;
+    gap: 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(90, 60, 40, 0.8);
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.2);
+}
+
+.toggle-btn.active {
+    color: #b38c5e;
+}
+
+.error {
+    color: #ffcccc;
+    margin-top: 5px;
+    font-size: 12px;
+}

@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .choice{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    gap: 15px;
+  }
+  .label{
+    font-size: 20px;
+    color:  #75543e;
+    margin-top: 10px;
+  }
+  .selection{
+    padding: 10px;
+    border-radius: 26px;
+    border: 1px solid #75543e;
+    color: #75543e;
+    background-color: #75543e;
+    color: rgb(244, 244, 234);
+  }
+
+  .chart-container {
+    width: 800px;
+    max-width: 100%;
+    height: 500px;
+    display: none;
+  }
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }

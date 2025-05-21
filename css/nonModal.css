@@ -1,0 +1,36 @@
+#subscriptionWindow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.button1{
+    color: aliceblue;
+    background-color:  rgb(120, 54, 0);
+    padding: 15px;
+    border: 1px solid  rgb(120, 54, 0);
+    border-radius: 20px;
+}
+.button1:hover{
+    background-color: aliceblue;
+    color: rgb(120, 54, 0)
+}
+.thankYouMessage {
+    display: none;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+}
