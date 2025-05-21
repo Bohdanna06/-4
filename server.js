@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
+
 const PORT = 3000;
 
 app.use(cors());
@@ -170,3 +171,5 @@ app.delete('/api/products/:id', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Сервер працює на http://localhost:${PORT}`);
 });
+
+
