@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Адмін-Панель</title>
+</head>
+
+<body>
+    <header class="header">
+        <img src="/image/brown-coffee-beans.jpg" class="logo">
+        <nav class="navigating">
+            <a class="link" href="./index.html">Main Page</a>
+            <a class="link" href="./shop.html">Shop</a>
+            <a class="link" href="./graphics.html">Statistics</a>
+            <a class="link" href="./profile.html">Profile</a>
+        </nav>
+    </header>
+    <main class="admin-container">
+        <div class="hexagon-wrapper">
+            <div class="hexagon admin-hub">
+                <div class="hexagon-content">
+                    <h1>Адмін-Панель</h1>
+                    <p id="adminRole">Роль: Завантаження...</p>
+                </div>
+            </div>
+            <div class="hexagon users-panel">
+                <div class="hexagon-content">
+                    <h2>Керування Користувачами</h2>
+                    <div class="users-list" id="usersList">
+                        <!-- Users will be populated via JavaScript -->
+                    </div>
+                    <div class="user-form">
+                        <h3>Додати/Редагувати Користувача</h3>
+                        <div class="info-field">
+                            <label>Username:<span class="required-asterisk">*</span></label>
+                            <input type="text" id="userUsername">
+                        </div>
+                        <div class="info-field">
+                            <label>Password:<span class="required-asterisk">*</span></label>
+                            <input type="password" id="userPassword">
+                        </div>
+                        <div class="info-field">
+                            <label>Role:<span class="required-asterisk">*</span></label>
+                            <select id="userRole">
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                        <button id="saveUser">Зберегти</button>
+                        <div id="userError" class="error"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hexagon products-panel">
+                <div class="hexagon-content">
+                    <h2>Керування Товарами</h2>
+                    <div class="products-list" id="productsList">
+                        <!-- Products will be populated via JavaScript -->
+                    </div>
+                    <div class="product-form">
+                        <h3>Додати/Редагувати Товар</h3>
+                        <div class="info-field">
+                            <label>Name:<span class="required-asterisk">*</span></label>
+                            <input type="text" id="productName">
+                        </div>
+                        <div class="info-field">
+                            <label>Price:<span class="required-asterisk">*</span></label>
+                            <input type="number" id="productPrice">
+                        </div>
+                        <button id="saveProduct">Зберегти</button>
+                        <div id="productError" class="error"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-toggle">
+            <button class="toggle-btn" data-panel="users">👥</button>
+            <button class="toggle-btn" data-panel="products">🛍️</button>
+        </div>
+    </main>
+    <script src="/js/admin.js"></script>
+</body>
+
+</html>

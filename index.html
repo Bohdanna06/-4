@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- <link rel="stylesheet" href="/css/nonModal.css"> -->
+    <!-- <link rel="stylesheet" href="/css/adverticement.css"> -->
+    <link rel="stylesheet" href="/css/cardStyle.css">
+
+    <title> Laboratorna 2</title>
+</head>
+
+<body>
+    <header class="header">
+        <img src="/image/brown-coffee-beans.jpg" class="logo">
+        <nav class="navigating">
+            <a class="link" href="./shop.html">Products</a>
+            <a class="link">About us</a>
+            <a class="link">Testimonial</a>
+            <a class="link" href="/profile.html">Profile</a>
+            <a class="link" href="/graphics.html">Static</a>
+
+            <a href="#" id="loginIcon" title="Увійти">
+                <button class="icon" alt="Login"> Увійти </button>
+            </a>
+            <a href="#" id="registerIcon" title="Зареєструватися">
+                <button class="icon" alt="Register"> Зареєструватися </button>
+            </a>
+        </nav>
+        <button id="placeOrder" class="cart-icon js-open-cart" aria-label="Open cart">
+            <img class='cart-class ' src="/image/cart-3.svg" alt="Корзина" />
+            <span class="cart-count js-cart-count">0</span>
+        </button>
+        <div id="registerModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button js-close-register">×</span>
+                <form id="registerForm">
+                    <h3>Реєстрація</h3>
+                    <label>Логін:<span class="required-asterisk">*</span></label>
+                    <input type="text" id="regLogin" required>
+
+                    <label>Пароль:<span class="required-asterisk">*</span></label>
+                    <input type="password" id="regPassword" required>
+
+                    <label>Повторіть пароль:<span class="required-asterisk">*</span></label>
+                    <input type="password" id="regRepeatPassword" required>
+
+                    <label>Email:</label>
+                    <input type="email" id="regEmail">
+
+                    <button type="submit">Зареєструватися</button>
+                    <div id="registerError" class="error"></div>
+                </form>
+            </div>
+        </div>
+        <div id="loginModal" class="modal hidden">
+            <span class="close-button js-close-login">×</span>
+            <form id="loginForm">
+                <h3>Авторизація</h3>
+                <label>Логін:<span class="required-asterisk">*</span></label>
+                <input type="text" id="login" required>
+
+                <label>Пароль:<span class="required-asterisk">*</span></label>
+                <input type="password" id="loginPassword" required>
+
+                <button type="submit">Увійти</button>
+                <div id="loginError" class="error"></div>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class=" overlay js-overlay js-close-cart"> </div>
+        <div class="cart js-cart">
+            <span class="close js-close-cart js-close-modal"> ×</span>
+            <div class="cart-inner-scroll">
+                <div class="cart-container">
+                    <p class="text">Товари в кошику:</p>
+                    <div class="cart-items js-cart-items">
+                        <!-- Товари тут -->
+                    </div>
+                    <div class="cart-total js-cart-total">
+                        <p class="text">Загальна сума: <span class="js-total-price">0</span>грн</p>
+                    </div>
+                    <div class="cart-empty-container">
+                        <p class="text">Ваш кошик порожній!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="fullscreenAd" class="hidden">
+            <div class="ad-content">
+                <p>🌟 Спеціальна акція! Тільки сьогодні -50% на все! 🌟</p>
+                <button id="closeAd" class="hidden">×</button>
+            </div>
+        </div> -->
+
+
+        <div class="first-section">
+            <h1 class="main-header"> Enjoy your Coffe with ZARA</h1>
+            <p class="main-paragraph"> Discover tranquility at Ngopi a sanctuary for unwinding,
+                where your evenings are perfected with relaxation and rich flavors</p>
+            <button class="button"> Explore Product </button>
+        </div>
+
+        <div id="filterButtons">
+            <button data-category="all" class="filter-btn">Всі</button>
+            <button data-category="hot" class="filter-btn">Гарячі</button>
+            <button data-category="cold" class="filter-btn">Холодні</button>
+        </div>
+
+        <section class="second-section">
+            <div id="coffee-gallery"> </div>
+            <div id="coffeeInfo" class="coffee-info">
+                <span id="closeBtn" class="close-btn"></span>
+            </div>
+        </section>
+        <button id="loadMore">Download more...</button>
+
+
+        <div class="page2">
+            <h2 class="coffe-creation">In ZARA you can create your own cafe</h2>
+            <div class="coffe-buttons">
+                <button class="btn">Latte</button>
+                <button class="btn">Robusta</button>
+                <button class="btn">Arabica</button>
+            </div>
+            <div class="product-container">
+                <ul class="container js-products-list">
+                </ul>
+            </div>
+        </div>
+        <!-- <div id="subscriptionWindow">
+            <h3>Підпишіться на наші новини!</h3>
+            <div class="buttons">
+                <button id="acceptBtn" class="button1">Прийняти</button>
+                <button id="declineBtn" class="button1">Відхилити</button>
+            </div>
+        </div>
+        <div id="thankYouMessage" class="thankYouMessage">Дякуємо за приєднання!</div> -->
+    </main>
+    <script src="/js/index.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/cartLogic.js"></script>
+    <script src="/js/cartPopup.js"></script>
+    <!-- <script src="/js/nonModalWindow.js"></script> -->
+    <script src="/js/validation.js"> </script>
+</body>
+
+</html>

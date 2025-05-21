@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/graphics.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Статистика </title>
+</head>
+<body>
+    <header class="header">
+        <img src="/image/brown-coffee-beans.jpg"  class="logo">
+        <nav class="navigating">
+            <a class="link" href="./index.html">Main Page</a>
+            <a class="link">About us</a>
+            <a class="link">Testimonial</a>
+            <a class="link" href="/shop.html">Products</a>
+        </nav>
+    </header>
+    <h1>Статистика популярності товарів</h1>
+    <div class="choice ">
+    <label for="chartTypeSelector" class="label">Оберіть тип діаграми:</label>
+    <select id="chartTypeSelector" class="selection">
+        <option value="bar">Гістограма</option>
+        <option value="pie">Кругова діаграма</option>
+        <option value="line">Графік</option>
+    </select>
+</div>
+        <div id="barContainer" class="chart-container">
+          <canvas id="barChart"></canvas>
+        </div>
+        <div id="pieContainer" class="chart-container">
+          <canvas id="pieChart"></canvas>
+        </div>
+        <div id="lineContainer" class="chart-container">
+          <canvas id="lineChart"></canvas>
+        </div>
+      
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script  type="module" src="/js/grophics.js"></script>
+    
+</body>
+</html>

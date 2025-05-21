@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cardStyle.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Shop</title>
+</head>
+
+<body>
+    <header class="header">
+        <img src="/image/brown-coffee-beans.jpg" class="logo">
+        <nav class="navigating">
+            <a class="link" href="./index.html">Main Page</a>
+            <a class="link">About us</a>
+            <a class="link">Testimonial</a>
+            <a class="link" href="/graphics.html"> Statistic</a>
+            <a href="#" id="loginIcon" title="Увійти">
+                <button class="icon" alt="Login"> Увійти </button>
+            </a>
+            <a href="#" id="registerIcon" title="Зареєструватися">
+                <button class="icon" alt="Register"> Зареєструватися </button>
+            </a>
+        </nav>
+        <button id="placeOrder" class="cart-icon js-open-cart" aria-label="Open cart">
+            <img class='cart-class ' src="/image/cart-3.svg" alt="Корзина" />
+            <span class="cart-count js-cart-count">0</span>
+        </button>
+    </header>
+    <div id="registerModal" class="modal hidden">
+        <span class="close-button js-close-register">×</span>
+        <form id="registerForm">
+            <h3>Реєстрація</h3>
+            <label>Логін:<span class="required-asterisk">*</span></label>
+            <input type="text" id="regLogin" required>
+
+            <label>Пароль:<span class="required-asterisk">*</span></label>
+            <input type="password" id="regPassword" required>
+
+            <label>Повторіть пароль:<span class="required-asterisk">*</span></label>
+            <input type="password" id="regRepeatPassword" required>
+
+            <label>Email:</label>
+            <input type="email" id="regEmail">
+
+            <button type="submit">Зареєструватися</button>
+            <div id="registerError" class="error"></div>
+        </form>
+    </div>
+    <div id="loginModal" class="modal hidden">
+        <span class="close-button js-close-login">×</span>
+        <form id="loginForm">
+            <h3>Авторизація</h3>
+            <label>Логін:<span class="required-asterisk">*</span></label>
+            <input type="text" id="login" required>
+
+            <label>Пароль:<span class="required-asterisk">*</span></label>
+            <input type="password" id="loginPassword" required>
+
+            <button type="submit">Увійти</button>
+            <div id="loginError" class="error"></div>
+        </form>
+    </div>
+    <main class="main ">
+
+        <div class=" overlay js-overlay js-close-cart"> </div>
+        <div class="cart js-cart">
+            <span class="close js-close-cart js-close-modal"> ×</span>
+            <div class="cart-inner-scroll">
+                <div class="cart-container">
+                    <p class="text">Товари в кошику:</p>
+                    <div class="cart-items js-cart-items">
+                        <!-- Товари тут -->
+                    </div>
+                    <div class="cart-total js-cart-total">
+                        <p class="text">Загальна сума: <span class="js-total-price">0</span>грн</p>
+                    </div>
+                    <div class="cart-empty-container">
+                        <p class="text">Ваш кошик порожній!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-section">
+            <aside class="news-sidebar">
+                <ul class="news-list js-news-list"></ul>
+            </aside>
+        </div>
+        <div class="product-container">
+            <ul class="container js-products-list">
+            </ul>
+        </div>
+        <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+    </main>
+    <script type="module" src="/js/main.js"> </script>
+    <script src="/js/news.js"></script>
+    <script src="/js/cartPopup.js"> </script>
+    <script src="/js/validation.js"></script>
+</body>
+
+</html>
